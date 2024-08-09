@@ -18,6 +18,15 @@ code {
 }
 
 /* navbar */
+.css-i4bv87-MuiSvgIcon-root {
+  color: black;
+ 
+}
+
+.Login{
+  text-decoration: none;
+  color: rgb(147, 84, 145);
+}
 
 .container_nav{
   width: 100%;
@@ -53,22 +62,43 @@ code {
 }
 
 /* header */
-
-
-
 header{
- width: 84%;
- height: 1000vh;
- background-color: aqua;
- margin: auto;
-}
+  width: 84%;
+  height: auto;
+  /* background-color: aqua; */
+  margin: auto;
+ }
+ 
+ 
 
 .Box_colom{
   width: 100%;
   height: auto;
   border: 0.1px solid rgb(143, 139, 139);
+  /* position: relative; */
+ 
   
 }
+
+.Programs_sf-img{
+  object-fit: cover;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.Programs_sf-img:hover{
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.Programs_sf:hover{
+  opacity: 1;
+}
+
+
+
 .btn_booknow{
   width: 130px;
  height: 40px;
@@ -110,13 +140,195 @@ align-items: center;
 .Our-Stor{
   width: auto;
   height: 550px;
-  background-color: pink;
+  /* background-color: pink; */
   display: flex;
   justify-content: center;
   align-items: center;
 
 
 }
+.white_box-mommies{
+  width: 60%;
+  height: auto;
+  /* background-color: aqua; */
+}
+.Watch-Us{
+  width: auto;
+  height: 400px;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* .slider */
+
+
+.container_slider{
+  position: relative;
+}
+.slider_img{
+  width: 97%;
+  height: 229px;
+  object-fit: cover;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.container_slider:hover .slider_img{
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.container_slider:hover{
+  opacity: 1;
+}
+.slick-dots li button:before {
+  display: none;
+}
+
+/* white_boxon-mobile */
+
+.white_boxon-mobile{
+  width: 80%;
+  height: 40vh;
+  /* background-color: brown; */
+}
+.white_boxon-form{
+  width: 90%;
+  height: 50vh;
+  /* background-color: rgba(218, 218, 218, 0.329); */
+}
+.btn_send{
+  width: 130px;
+ height: 40px;
+ background-color: rgb(179, 135, 178);
+ color: white;
+
+}
+.btn_send:hover{
+  background-color: rgb(189, 162, 188);
+}
+
+
+/* email_mobile-box */
+
+.email_mobile-box{
+  width: 95%;
+  margin: auto;
+  /* background-color: aquamarine; */
+}
+
+
+footer{
+  width: 90%;
+  height: 40vh;
+  /* background-color: aliceblue; */
+}
+.email_container{
+height: 60vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(197, 196, 196, 0.568);
+
+}
+ 
+.get_moving-h1{
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+  
+
+   /* classes */
+
+   .classes{
+    width: 84%;
+    height: 40vh;
+    background-color: rgba(197, 197, 197, 0.568);
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(87, 87, 87);
+   }
+   .classes h1{
+    font-size: 3.75rem;
+    font-weight: bold;
+   }
+ 
+
+   .classes_box{
+    width:  70%;
+    height: auto;
+    margin: auto;
+    /* background-color: aquamarine; */
+    margin-top: 25px;
+   }
+
+
+   .Box_classes{
+  width: 100%;
+  height: auto;
+  border: 0.1px solid rgb(143, 139, 139);
+  /* position: relative; */
+  /* background-color: antiquewhite; */
+ 
+  
+}
+
+.classes-img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.classes-img:hover{
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.classes:hover{
+  opacity: 1;
+}
+
+/* about */
+
+.About{
+  width: 84%;
+  height: 40vh;
+  background-color: rgba(197, 197, 197, 0.568);
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(87, 87, 87);
+ }
+
+
+
+ .About_box{
+  width:  70%;
+  height: auto;
+  margin: auto;
+  /* background-color: aquamarine; */
+  margin-top: 25px;
+
+ }
+ .about_sm-box{
+  width: 90%;
+  height: 80vh;
+  /* background: #b89c9c; */
+
+ }
 
 @media only screen and (max-width: 600px){
   .nav_img_logo{
@@ -158,5 +370,45 @@ align-items: center;
     overflow: hidden;
     object-fit: cover;
   }
+  .white_box-mommies{
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(192, 216, 216);
+  }
+  footer{
+    width: 90%;
+    height: auto;
+    /* background-color: aliceblue; */
+  }
 
+  .email_container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(197, 196, 196, 0.568);
+    
+    }
+    .css-1hvcrwh-MuiTypography-root{
+      font-size: 2.75rem;
+     }
+
+     .css-1ey9xtw-MuiTypography-root {
+      font-size: 2rem;
+     }
+
+     .classes h1{
+      font-size: 2.75rem;
+     }
+     .get_moving-h1{
+      font-size: 2rem;
+    }
+
+     .about_sm-box{
+      width: 90%;
+      height: auto;
+      /* background: #b89c9c; */
+    
+     }
 }

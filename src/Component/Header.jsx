@@ -1,4 +1,4 @@
-import {Box, Button, Typography } from "@mui/material";
+import {Box,Typography } from "@mui/material";
 
 function Header() {
     return (
@@ -27,11 +27,12 @@ function Header() {
              
 {/* Our Programs in SF */}
 
-             <div className=' w-full m-auto h-96 bg-zinc-900 text-white flex justify-center items-center' >
+             <div className=' w-full m-auto h-96 bg-white-900  flex justify-center items-center' >
              
             <Typography variant="h3" sx={{
               marginTop:'70px',
-              fontWeight:'bold'
+              fontWeight:'bold',
+             
             }}>Our Programs in SF</Typography>
              
              </div>
@@ -45,7 +46,7 @@ function Header() {
              <div className="row">
              <div className="col-md-4">
               <div className=" Box_colom">
-                <img className="hover:bg-white cursor-pointer" src="./media/card1.webp"  alt="..."/>
+                <img className="Programs_sf-img" src="./media/card1.webp"  alt="..."/>
                
                 <Typography variant="h5" className="p-4">Mommy Time</Typography>
                 <hr className="w-10/12 m-auto  text-slate-500"/>
@@ -65,7 +66,7 @@ function Header() {
 {/* 2 */}
 <div className="col-md-4">
               <div className=" Box_colom">
-                <img className="hover:bg-white cursor-pointer" src="./media/card3.webp"  alt="..."/>
+                <img className="Programs_sf-img" src="./media/card3.webp"  alt="..."/>
                 <Typography variant="h5" className="p-4">Mom Plus One</Typography>
                 <hr className="w-10/12 m-auto  text-slate-500"/>
                 <p className="ml-5 mt-4">Mon, Tue, Wed, Thu, Fri</p>
@@ -84,7 +85,7 @@ function Header() {
 {/* 3 */}
 <div className="col-md-4">
               <div className=" Box_colom">
-                <img className="hover:bg-white cursor-pointer"  src="./media/card4.webp"  alt="..."/>
+                <img className="Programs_sf-img"  src="./media/card4.webp"  alt="..."/>
                 <Typography variant="h5" className="p-4">Mom to Be</Typography>
                 <hr className="w-10/12 m-auto  text-slate-500"/>
                 <p className="ml-5 mt-4">Mon, Tue, Wed, Thu, Fri</p>
@@ -136,7 +137,7 @@ function Header() {
 
 
               <div className=" Our-Stor">
-              <div className="w-3/4 m-auto h-80  bg-slate-600 text-center">
+              <div className="w-3/4 m-auto h-80 text-center">
          <Typography variant="h3" sx={{fontWeight:'bold',}}>Our Story</Typography>
          <p className="mt-4 p-3">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a
           story and let your users know a little more about you.</p>
@@ -147,8 +148,46 @@ function Header() {
               </div>
 
 
+          {/* Mommies say */}
 
 
+          <div className='sm:max-xl: md:grid-cols-2 md:item-center md:text-left sm:max-xl: grid'>
+
+
+        <div className=" w-full h-auto bg-slate-100 flex justify-center items-center  ">
+          <div className=" white_box-mommies ">
+          <Typography variant="h3" sx={{fontWeight:'bold'}}>What Our
+          Mommies Say</Typography>
+          <p className="mt-5">“I'm a testimonial. Click to edit me and add text that says something nice about you and your services.  Let your customers review you and tell their friends how great you are.”</p>
+          <button className="mt-4">Ronda Moss</button>
+          </div>
+        </div>  
+
+        <img className="" src="./media/2.webp"/>
+        </div>
+
+
+
+        {/* Watch Us Go */}
+
+
+
+
+        <div className=" Watch-Us">
+              <div className="w-3/4 m-auto h-60 text-center">
+         <Typography variant="h3" sx={{fontWeight:'bold',}}>Watch Us Go</Typography>
+         <p className="mt-4 p-3">Watch Us Go
+I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+
+
+         </div> 
+              </div>
+
+
+    {/* 5box img */}
+
+
+    
 
              </header>
         </>

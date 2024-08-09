@@ -14,17 +14,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import { FaUserCircle } from "react-icons/fa";
+// import Header from './Header';
+// import Responsive from './Slider';
 
 const drawerWidth = 240;
 const navItems = [
-  
-  { Name: "Header", URL: "Header" },
-  { Name: "Skills", URL: "Skills" },
-  { Name: "Project", URL: "/projects" },
-  { Name: "Resume", URL: "Project" },
-  { Name: "Contact", URL: "Project" },
+  { Name: "Home", URL: "/" },
+  { Name: "Classes", URL:"/Classes"},  // Added slash to the URL
+  { Name: "Plans & pricing", URL: "/Plans" },
+  { Name: "About", URL: "/About" },
+  { Name: "Contact", URL: "/Contact" },
 ];
 
 function Navbar(props) {
@@ -37,22 +38,21 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2,  ml:7}}>
-      <img className='nav_img_logo' src='./media/logo-1.png' alt='error' style={{
-             width:"200px",
-           
-          }}/>
+      <Typography variant="h6" sx={{ my: 2, ml: 7 }}>
+        <img className='nav_img_logo' src='./media/logo-1.png' alt='error' style={{ width: "200px" }} />
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <Link to={item.URL} key={item.Name} style={{ textDecoration: 'none' }}>
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.Name} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.Name} />
+              <ListItemText>
+                <Link to={item.URL} style={{ textDecoration: 'none', color: 'black' }}>
+                  {item.Name}
+                </Link>
+              </ListItemText>
             </ListItemButton>
           </ListItem>
-          </Link>
         ))}
       </List>
     </Box>
@@ -61,96 +61,86 @@ function Navbar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
+    <>
       <div className='container1'>
-<Box sx={{ display: 'flex'}}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{
-        display:'flex',
-        justifyContent: 'center',
-        backgroundColor:"rgb(33 36 40 / 0%)",
-        // backgroundColor:'black',
-        height:'17vh',
-        // width:'100%'
-      }}>
-        <Toolbar>
-      
-        <img className='nav_logo-1' src='./media/logo-1.png' alt='error' style={{
-              width:"200px",
-               
-            //   marginLeft:'50px',
-            //   backgroundColor:'pink'
-          }}/>
-{/* img2 */}
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <AppBar component="nav" sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            backgroundColor: 'white',
+            height: '17vh',
+          }}>
+            <Toolbar>
 
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            // backgroundColor='white'
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, }}
-         className='icons_btn' >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-          <img src='./media/logo-1.png' alt='error' style={{
-              width:"200px",
-              marginLeft:'60px',
-              //  backgroundColor:'yellow'
-          }}/>
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block',} }}>
-            {navItems.map((item) => (
-              <Link to={item.URL} key={item.Name} style={{ textDecoration: 'none',color:'black', }}>
-              <Button key={item} sx={{ color: '#fff'}}>
-                {item.Name}
-              </Button>
-              </Link>
-            ))}
-            
-          </Box>
-          <div className='nav_icons'>
-         
-         <div className='icons_use'> <Link className=' cursor-pointer' to={''}><FaUserCircle/></Link></div>
-         <div className='cursor-pointer '> <Link className='no-underline text-slate-900' to={''}>Login</Link></div>
-         <Button className='nav_btn-bt' variant="contained">Book Now</Button>
-
+              <img className='nav_logo-1' src='./media/logo-1.png' alt='error' style={{
+                width: "200px",
+              }} />
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: 'none' } }}
+                className='icons_btn'>
+                <MenuIcon />
+              </IconButton>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              >
+                <img src='./media/logo-1.png' alt='error' style={{
+                  width: "200px",
+                  marginLeft: '60px',
+                }} />
+              </Typography>
+              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {navItems.map((item) => (
+                  <Button key={item.Name} sx={{ color: 'black' }}>
+                    <Link to={item.URL} style={{ textDecoration: 'none', color: 'black' }}>
+                      {item.Name}
+                    </Link>
+                  </Button>
+                ))}
+              </Box>
+              <div className='nav_icons'>
+                <div className='icons_use'>
+                  <Link sx={{ color: 'rgb(147, 84, 145)', cursor: 'pointer' }} to={''}><FaUserCircle /></Link>
+                </div>
        
-         </div>
+                <div className='cursor-pointer text-fuchsia-700 '> <Link sx={{textDecoration:'none', color:'rgb(147, 84, 145)'}} to={''}>Login</Link></div>
+              
+                <Button sx={{ backgroundColor: 'rgb(147, 84, 145)' }} className='nav_btn-bt' variant="contained">Book Now</Button>
+              </div>
+            </Toolbar>
+          </AppBar>
+          <nav>
+            <Drawer
+              container={container}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true,
+              }}
+              sx={{
+                display: { xs: 'block', sm: 'none' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              }}
+            >
+              {drawer}
+            </Drawer>
+          </nav>
+        </Box>
+      </div>
 
-        
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, 
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
-</div>
-
+    </>
   );
 }
 
 Navbar.propTypes = {
   window: PropTypes.func,
 };
-
 
 export default Navbar;
